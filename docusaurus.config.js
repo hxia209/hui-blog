@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hui Blog',
-  tagline: 'Just trying out things',
+  title: 'Fried Chikernetes',
+  tagline: 'A collection of a developer daily struggles and how to solve them!',
   url: 'https://hxia209.github.io',
   baseUrl: '/hui-blog/',
   onBrokenLinks: 'throw',
@@ -47,7 +47,7 @@ const config = {
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/hxia/hui-blog',
+            href: 'https://github.com/hxia209/hui-blog',
             label: 'GitHub',
             position: 'right',
           },
