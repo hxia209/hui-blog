@@ -4,9 +4,20 @@
         <title>Hui Blog Blog</title>
         <link>https://hxia209.github.io/hui-blog/blog</link>
         <description>Hui Blog Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Mar 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[How to make your certificates available inside your Java container]]></title>
+            <link>https://hxia209.github.io/hui-blog/blog/java-container-certificates</link>
+            <guid>java-container-certificates</guid>
+            <pubDate>Tue, 15 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This blog post takes you through different approaches to make your certificates available in your Java container when deployed to Kubernetes. Going from the most static way to be able to dynamically change it during rollout.]]></description>
+            <content:encoded><![CDATA[<p>This blog post takes you through different approaches to make your certificates available in your Java container when deployed to Kubernetes. Going from the most static way to be able to dynamically change it during rollout.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="import-certificate-through-dockerfile">Import certificate through Dockerfile<a class="hash-link" href="#import-certificate-through-dockerfile" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_mojV" id="configmap-with-a-local-cacerts">ConfigMap with a local cacerts<a class="hash-link" href="#configmap-with-a-local-cacerts" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_mojV" id="configmap-with-certificates-and-init-container">ConfigMap with certificates and Init-Container<a class="hash-link" href="#configmap-with-certificates-and-init-container" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_mojV" id="cluster-operator-and-init-container">Cluster Operator and Init-Container<a class="hash-link" href="#cluster-operator-and-init-container" title="Direct link to heading">​</a></h2>]]></content:encoded>
+            <category>java</category>
+            <category>container</category>
+            <category>certificates</category>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://hxia209.github.io/hui-blog/blog/welcome</link>
