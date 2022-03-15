@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhui_blog=self.webpackChunkhui_blog||[]).push([[836],{4202:function(l){l.exports=JSON.parse('{"allTagsPath":"/hui-blog/blog/tags","slug":"/hui-blog/blog/tags/hola","name":"hola","count":1,"permalink":"/hui-blog/blog/tags/hola"}')}}]);

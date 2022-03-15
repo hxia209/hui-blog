@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhui_blog=self.webpackChunkhui_blog||[]).push([[458],{6106:function(o){o.exports=JSON.parse('{"allTagsPath":"/hui-blog/blog/tags","slug":"/hui-blog/blog/tags/facebook","name":"facebook","count":1,"permalink":"/hui-blog/blog/tags/facebook"}')}}]);
