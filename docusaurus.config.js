@@ -46,6 +46,7 @@ const config = {
         },
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/me', label: 'About Me', position: 'right'},
           {
             href: 'https://github.com/hxia209/hui-blog',
             label: 'GitHub',
