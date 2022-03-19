@@ -45,9 +45,9 @@ kubectl create configmap $NAME --from-file=$JAVA_HOME/jre/lib/security/cacerts -
 
 For simplicity, we're calling our _configMap_ __cacerts__, but it could be any other name, as long as it is unique inside `$NAMESPACE`.
 
-### Step 2 - Mount _ConfigMap_ into __Deployment_
+### Step 3 - Mount _ConfigMap_ into __Deployment_
 
-To mount configMap as a volume into your _Deployment_, create a volume entry referencing the configMap you've just created, then add another volumeMount entry to the Java application container. See example below:
+To mount cacerts configMap as a volume into your _Deployment_, create a volume entry referencing the configMap you've just created, then add another volumeMount entry to the Java application container. See example below:
 
 ```yaml
 apiVersion: v1
@@ -66,6 +66,12 @@ spec:
     - name: cacerts
       configMap:
         name: cacerts
+```
+
+You can either modify your yaml directly on the console or open a `vim` editor in your command line by running:
+
+```bash
+kubectl edit deployment/example - n $NAMESPACE
 ```
 ## ConfigMap with certificates and Init-Container
 
