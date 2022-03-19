@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fried Chikernetes',
+  title: 'Fried Chikenetes',
   tagline: 'A collection of a developer daily struggles and how to solve them!',
   url: 'https://hxia209.github.io',
   baseUrl: '/hui-blog/',
@@ -39,9 +39,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Fried Chickernetes',
+        title: 'Fried Chickenetes',
         logo: {
-          alt: 'Fried Chickernetes',
+          alt: 'Fried Chickenetes',
           src: 'img/logo.svg',
         },
         items: [
@@ -56,7 +56,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Fried Chickernetes. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Fried Chickenetes. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
