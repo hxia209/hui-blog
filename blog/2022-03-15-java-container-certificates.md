@@ -75,4 +75,58 @@ kubectl edit deployment/example - n $NAMESPACE
 ```
 ## ConfigMap with certificates and Init-Container
 
+Importing a certificate into a truststore, creating a _ConfigMap_ and then mount it as a volume involves multiple manual steps which requires a set of specific tooling to be achieved, such as `keytool`, `kubectl` and possibly making changes directly in kubernetes console. Shoveling it all into your pipelines might not be as straight forward as it seems and ultimately not very kubebernetes native.
+
+To overcome some of the issues mentioned above, we'll leverage [_initContainers_](TBD), a first class kubernetes citizen, to do all the work for us and abstract the container image from everything else. Other benefits from this approach is the fact that every component of it becomes modular, making it plugable and reusable. And also, the original truststore is not overriden.
+
+This time we start with a certificate, or an aggregate of certificates hosted in a _ConfigMap_. Using a similar command as before:
+
+```bash
+export NAMESPACE=<Namespace where your app is running>
+export NAME=certs
+kubectl create configmap $NAME --from-file=<your certificates file location> -n $NAMESPACE
+```
+
+```yaml
+initContainers:
+  - name: initContainer
+    image: <a slim jdk image>
+    command:
+    - bash
+    - -c
+    - |
+      keytool -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -noprompt -trustcacerts -importcert -alias my-cert -file $JAVA_HOME/jre/lib/security/my-certificate.cer
+    volumeMounts:
+    - name: certs
+      mountPath: /etc/pki/java/my-certificate.cer
+      subPath: my-certificate.cer
+  volumes:
+    - name: certs
+      configMap:
+        name: certs
+```
+
+The idea is to share a volume between the main container and the _initContainer_ where the truststore should be placed for consumption and then import the certificate into truststore during pod start-up. This way, if certificates need to be changed or renewed, all we need to do is to update the _ConfigMap_.
+
+Due to _initContainer_ being part of the _Deployment_ specification, it can be easily included in your helm charts without impacting your release workflow.
+
 ## Cluster Operator and Init-Container
+
+Ideally, as a dev, managing or manipulating certificates shouldn't be part of our daily routine. If all of it could be abstracted and managed by the platform or infrastructure, you've made the day for your developer.
+
+A step further into automating the previous method would be having the certificate created as a _ConfigMap_ for us.
+
+This can be achieved using [cluster operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/), extending Kubernetes native capabilities with custom or 3rd party operators.
+
+:::tip
+
+A custom operator could be developed to fetch firm wide certificates and injects them into certain namespaces or deployments that has a very specific annotations configured, making them availabe to mount, or mount them directly into you _Deployment_.
+
+:::
+
+:::info
+
+
+For recent years, there has been a new trend called Service Mesh, for e.g. [Istio](https://istio.io/latest/about/service-mesh/) that has built-in capabilities to solve the problem that initiated this post.
+
+:::
