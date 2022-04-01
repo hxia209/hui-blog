@@ -67,7 +67,8 @@ Which results in:
 ],"total":20570,"totalPages":1029,"actualPage":1,"itemsPerPage":20,"numPaginations":0,"hiddenResults":false,"summary":["Comprar","Viviendas","barrio Trafalgar, Madrid","Todos los precios","Todos los tamaños"],"alertName":"Viviendas en barrio Trafalgar, Madrid","upperRangePosition":20,"paginable":true,"lowerRangePosition":0}
 ```
 
-Replaced description with 📜 and removed most of the results due to the response being massive. But as you can see, we've successfully invoked Idealist's api and got a response. 
+Replaced description tag from response with 📜 and removed most of the results due to the response being massively long. But as you can see, we've successfully invoked Idealist's api and got real data from them. 
+
 Now it's time to create an [_Quarkus_](https://quarkus.io/) application with it, containerize, deploy to [_OpenShift_](http://redhat.com/en/technologies/cloud-computing/openshift) as a [_Knative_](http://knative.dev) [_Service_](https://github.com/knative/specs/blob/main/specs/serving/knative-api-specification-1.0.md#service) and call it periodically using a [_Ping Source_](https://knative.dev/docs/eventing/sources/ping-source/reference/) over a [_Channel_](https://knative.dev/docs/eventing/channels/) and sends me a message to my Telegram.
 
 Just kidding, that would be too much, right? (Stay tuned!)
