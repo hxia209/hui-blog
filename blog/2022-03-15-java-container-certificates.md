@@ -77,7 +77,7 @@ kubectl edit deployment/example - n $NAMESPACE
 
 Importing a certificate into a truststore, creating a _ConfigMap_ and then mount it as a volume involves multiple manual steps which requires a set of specific tooling to be achieved, such as `keytool`, `kubectl` and possibly making changes directly in kubernetes console. Shoveling it all into your pipelines might not be as straight forward as it seems and ultimately not very kubebernetes native.
 
-To overcome some of the issues mentioned above, we'll leverage [_initContainers_](TBD), a first class kubernetes citizen, to do all the work for us and abstract the container image from everything else. Other benefits from this approach is the fact that every component of it becomes modular, making it plugable and reusable. And also, the original truststore is not overriden.
+To overcome some of the issues mentioned above, we'll leverage [_initContainers_](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/), a first class kubernetes citizen, to do all the work for us and abstract the container image from everything else. Other benefits from this approach is the fact that every component of it becomes modular, making it plugable and reusable. And also, the original truststore is not overriden.
 
 This time we start with a certificate, or an aggregate of certificates hosted in a _ConfigMap_. Using a similar command as before:
 
