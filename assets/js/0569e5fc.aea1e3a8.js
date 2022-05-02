@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhui_blog=self.webpackChunkhui_blog||[]).push([[352],{7034:function(o){o.exports=JSON.parse('{"permalink":"/hui-blog/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

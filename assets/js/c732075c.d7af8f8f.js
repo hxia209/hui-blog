@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhui_blog=self.webpackChunkhui_blog||[]).push([[904],{4322:function(o){o.exports=JSON.parse('{"permalink":"/hui-blog/blog/tags/oath-2","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
