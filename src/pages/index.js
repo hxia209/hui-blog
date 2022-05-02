@@ -6,7 +6,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -19,8 +18,6 @@ function HomepageHeader() {
   );
 }
 
-
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -30,7 +27,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <RenderLineChart />
       </main>
     </Layout>
   );
