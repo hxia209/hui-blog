@@ -6,7 +6,7 @@ tags: [api, oath2, curl, http]
 
 The origin of most of our ideas and solutions are the daily problems that we face. Usually the reasoning behind it is just to make life easier (thats probably what Jeff Bezos thought when he started Amazon).
 
-Personally, I've been looking for a house or apartment that is to my liking, well located and doesn't dry up my walled 💸💸💸. So what I normally do is open a webpage called [Idealista](https://www.idealista.pt/pt/) which provided a real estate listing given desired parameters, which is most of the time equivelent to less money and more space.
+Personally, I've been looking for a house or apartment that is to my liking, well located and doesn't dry up my wallet 💸💸💸. So what I normally do is open a webpage called [Idealista](https://www.idealista.pt/pt/) which provided a real estate listing given desired parameters, which is most of the time equivelent to less money and more space.
 Checking the page daily and always finding the same old ads is a bit frustrating and time consuming so...why not make my life easier and become the next Jeff Bezos?
 
 ## Request Access
