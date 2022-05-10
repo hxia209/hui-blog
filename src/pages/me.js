@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 
 function me() {
   return (
-    <Layout title="Hello">
+    <Layout title="About me">
       <div
         style={{
           display: 'flex',
@@ -12,8 +12,9 @@ function me() {
           height: '50vh',
           fontSize: '20px',
         }}>
+        <p>About me</p>
         <p>
-          Edit <code>pages/me.js</code> and save to reload.
+          Hello! My name is Hui and welcome to my blog. I'm an tech entusiast, open-source adopter, DevOps engineer, Java developer and newbie blogger. 
         </p>
       </div>
     </Layout>
