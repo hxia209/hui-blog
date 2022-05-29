@@ -16,6 +16,7 @@ const config = {
   organizationName: 'hxia209', 
   projectName: 'hui-blog',
   trailingSlash: false,
+  staticDirectories: ['public', 'static'],
 
   presets: [
     [
