@@ -59,7 +59,7 @@ code {
   border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   color: #111111;
-  max-width: 50%;
+  max-width: 100%;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -71,11 +71,29 @@ code {
 }
 
 .card-content {
-  margin-left: 0; 
-  margin-right: auto;
+  margin-left: auto; 
+  margin-right: 0;
 }
 
 .image.is-512x512 {
   height: 512px;
   width: 512px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box {
+  padding-left: 150px;
+  inline-size: 400px; 
 }
